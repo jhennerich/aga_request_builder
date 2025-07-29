@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { AgaRequests } from './aga-requests/aga-requests';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    AgaRequests
   ],
   imports: [
     BrowserModule,
