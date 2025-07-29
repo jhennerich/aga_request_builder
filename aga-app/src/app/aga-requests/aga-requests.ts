@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { AgaRequest } from '../aga_requests';
+import {AGA} from '../mock-aga-requests';
 
 @Component({
   selector: 'app-aga-requests',
   standalone: false,
   templateUrl: './aga-requests.html',
-  styleUrl: './aga-requests.css'
+  styleUrl: './aga-requests.css',
 })
 export class AgaRequests {
-  aga_request: AgaRequest = {
-    id: 1,
-    name: 'First AGA Request'
+  aga_reqests = AGA;
+  selectedAGA?: AgaRequest;
+
+  onSelect(aga: AgaRequest): void {
+    this.selectedAGA = aga;
   };
 
   constructor() {

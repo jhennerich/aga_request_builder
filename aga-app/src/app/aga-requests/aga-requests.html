@@ -1,6 +1,18 @@
-<h2> AGA Request: {{aga_request.name | uppercase}}</h2>
 
-<div>
-  <label for="name">AGA name: </label>
-  <input id="name" [(ngModel)]="aga_request.name" placeholder="name">
+<ul class="aga_requests">
+  <li *ngFor="let aga of aga_reqests" >
+    <button [class.selected]="aga === selectedAGA" type="button" (click)="onSelect(aga)">
+      <span class="badge">{{aga.id}}</span>
+      <span class="name">{{aga.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedAGA">
+  <h2>{{selectedAGA.name | uppercase}} Details</h2>
+  <div>id: {{selectedAGA.id}}</div>
+  <div>
+    <label for="aga-name">AGA name: </label>
+    <input id="aga-name" [(ngModel)]="selectedAGA.name" placeholder="name">
+  </div>
 </div>
