@@ -1,1 +1,6 @@
-<p>aga-requests works!</p>
+<h2> AGA Request: {{aga_request.name | uppercase}}</h2>
+
+<div>
+  <label for="name">AGA name: </label>
+  <input id="name" [(ngModel)]="aga_request.name" placeholder="name">
+</div>

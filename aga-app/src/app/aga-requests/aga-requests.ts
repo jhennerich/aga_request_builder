@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AgaRequest } from '../aga_requests';
 
 @Component({
   selector: 'app-aga-requests',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './aga-requests.css'
 })
 export class AgaRequests {
+  aga_request: AgaRequest = {
+    id: 1,
+    name: 'First AGA Request'
+  };
+
+  constructor() {
+    // Initialization logic can go here
+  }
 
 }
